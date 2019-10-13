@@ -9,9 +9,11 @@ Client from https://github.com/epigramai/tfserving-python-predict-client
 ## Tensorflow serving client
 This is a tensorflow serving client implementation from https://github.com/epigramai/tfserving-python-predict-client.
 
+You can find here a Tensorflow client examples to trade.
+
 The predict client is meant to be used with a model served by TensorFlow Serving. Because tfserving model server runs a gRPC service, it cannot be requested by just sending a normal HTTP request. The predict_client package is a grcp client that can request the service.
 
-Read the author blog posts about TensorFlow Serving:
+Read the author's blog posts about TensorFlow Serving:
 
 [Part 1](https://medium.com/p/a79726f7c103/) and [Part 2](https://medium.com/p/682eaf7469e7/)
 
@@ -27,6 +29,10 @@ There is one here https://github.com/bitnami/bitnami-docker-tensorflow-serving
 
 ## How to use
 Check out the examples.
+
+Example 1 use fixed enter data and request a response from the serving model.
+
+Example 2 generates random data simulating some Forex enter data and request a response from the serving model.
 
 ### predict_client.prod_client ProdClient
 def __init__(self, host, model_name, model_version):
