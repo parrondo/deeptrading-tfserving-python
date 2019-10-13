@@ -1,0 +1,21 @@
+version: '2'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  tensorflow-serving:
+    image: 'bitnami/tensorflow-serving:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '8500:8500'
+      - '8501:8501'
+    volumes:
+      - '/home/parrondo/PRODUCTION/models/$MODEL_NAME:/bitnami/model-data'
+    networks:
+      - app-tier
+    environment:
+        TENSORFLOW_SERVING_MODEL_NAME: $MODEL_NAME
+
