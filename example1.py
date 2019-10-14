@@ -1,3 +1,16 @@
+#
+# Example 1 file
+#
+# This client send 3 requests to the Tensorflow server.
+# The content of the request data is a numpy array with three columns
+# representing three OHLC sample data, to test the version 1 of
+# the model '07_First_Forex_Prediction'
+# Note the 'in_tensor_name': 'X' which must be the same in your model tensor name.
+#
+# Author: R.M.Parrondo
+#https://github.com/parrondo/deeptrading-tfserving-python
+#
+
 import logging
 import numpy as np
 
@@ -11,7 +24,7 @@ logger = logging.getLogger(__name__)
 
 # Make sure you have a model running on localhost:8500
 host = '0.0.0.0:8500'
-model_name = 'pif'
+model_name = '07_First_Forex_Prediction'
 model_version = 1
 
 client = ProdClient(host, model_name, model_version)

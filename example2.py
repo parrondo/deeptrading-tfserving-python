@@ -1,4 +1,16 @@
 #
+# Example 2 file
+#
+# This client send several requests contoled by 'repetitions', to the Tensorflow server.
+# The content of the request data is a numpy array with 'repetitions' columns
+# representing multipe OHLC sample data, to test the version 1 of
+# the model '07_First_Forex_Prediction'
+# Note the 'in_tensor_name': 'X' which must be the same in your model tensor name.
+#
+# Author: R.M.Parrondo
+#https://github.com/parrondo/deeptrading-tfserving-python
+#
+
 import logging
 import numpy as np
 
@@ -20,13 +32,13 @@ logger = logging.getLogger(__name__)
 
 # Make sure you have a model running on localhost:8500
 host = '0.0.0.0:8500'
-model_name = 'pif'
+model_name = '07_First_Forex_Prediction'
 model_version = 1
 
 client = ProdClient(host, model_name, model_version)
 
 # Generate random numbers between mini and maxi
-repetitions = 100
+repetitions = 10
 # Change mini and maxi in order to get prices 
 mini = 0.9
 maxi = 1.5
