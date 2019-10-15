@@ -20,7 +20,12 @@ https://todotrader.com/deep-trading-with-tensorflow-viii/
 
 
 ### Install
-`pip install git+ssh://git@github.com/epigramai/tfserving-python-predict-client.git`
+`conda create --name myenv`
+
+`$ conda activate myenv`
+
+`(myenv)$ pip install git+https://github.com/parrondo/deeptrading-tfserving-python.git`
+
 
 ### If you need a model server
 There is one here https://github.com/bitnami/bitnami-docker-tensorflow-serving
