@@ -39,8 +39,8 @@ Example 2 generates random data simulating some Forex enter data and request a r
 
 ### predict_client.prod_client ProdClient
 def __init__(self, host, model_name, model_version):
- - host: the host (e.g. localhost:9000)
- - model_name: your model name, e.g. 'mnist'
+ - host: the host (e.g. '0.0.0.0:8500')
+ - model_name: your model name, e.g. '07_First_Forex_Prediction'
  - model_version: model version, e.g. 1.
  
 ProdClient.predict(self, request_data, request_timeout=10):
@@ -91,5 +91,8 @@ The mock client predict function simply returns the mock response.
 ## Development
 
 ### Generate python code from .proto files
+
+Caution, this is not always trivial!
+
 `pip install grpcio-tools`
 `python -m grpc_tools.protoc -I protos/ --python_out=predict_client/pbs --grpc_python_out=predict_client/pbs protos/*`
