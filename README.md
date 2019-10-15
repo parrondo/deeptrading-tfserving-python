@@ -4,8 +4,6 @@
 Client from https://github.com/epigramai/tfserving-python-predict-client
 -->
 
-## Working in process. Do not use yet!!
-
 ## Tensorflow serving client
 This is a tensorflow serving client implementation from https://github.com/epigramai/tfserving-python-predict-client.
 
