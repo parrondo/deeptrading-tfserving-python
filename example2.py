@@ -1,7 +1,7 @@
 #
 # Example 2 file
 #
-# This client send several requests contoled by 'repetitions', to the Tensorflow server.
+# This client send several requests controled by 'repetitions', to the Tensorflow server.
 # The content of the request data is a numpy array with 'repetitions' columns
 # representing multipe OHLC sample data, to test the version 1 of
 # the model '07_First_Forex_Prediction'
